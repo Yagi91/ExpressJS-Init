@@ -19,6 +19,9 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
+//Style the page with static CSS
+app.use("/path", express.static(__dirname + "/public"));
+
 // your first API endpoint...
 app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
